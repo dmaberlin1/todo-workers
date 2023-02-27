@@ -1,0 +1,47 @@
+.app-add-form{
+    margin-top: 30px;
+    padding: 25px;
+    background-color: rgba(44, 62, 80, 0.3);
+    border-radius: 48px;
+    box-shadow: 15px 15px 30px rgba(0,0,0,.15);
+    color: #fff;
+
+}
+
+h3  {
+    font-size: 29px;
+    padding-top: 15px;
+    text-align: center;
+    color: #fff;
+}
+.add-form{
+    margin-top: 30px;
+    padding-bottom: 25px;
+
+}
+.add-form input{
+
+    width: 350px;
+   margin-left: 55px;
+    font-size: 35px;
+    padding: 3px;
+    text-align: center;
+    background-color: rgba(239, 240, 243, 0.62);
+
+}
+.add-form input:last-of-type{
+margin-right: 15px;
+    width: 150px;
+
+}
+
+.btn{
+    border-radius: 25px !important;
+}
+.btn-outline-light{
+    background-color: rgba(44, 69, 92, 0.27);
+    border-color: #2c3e50;
+    box-shadow: 15px 15px 30px rgba(0,0,0,.15);
+    margin-left: 5px !important;
+
+}

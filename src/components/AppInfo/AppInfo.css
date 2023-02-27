@@ -1,0 +1,14 @@
+.app-info{
+    padding: 25px;
+    background-color: rgba(44, 62, 80, 0.3);
+    border-radius: 48px;
+    box-shadow: 15px 15px 30px rgba(0,0,0,.15);
+    color: #fff;
+}
+/*span{*/
+/*    font-weight: 700;*/
+/*    letter-spacing: 3px;*/
+/*    font-size: 40px;*/
+/*    padding: 0 5px;*/
+/*    color: rgb(190 228 237);*/
+/*}*/
