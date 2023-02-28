@@ -5,18 +5,29 @@ import starFilledIcon from '../../assets/img/icons/stars-svgrepo-com (1).svg'
 import likeIcon from '../../assets/img/icons/favorite-good-like-svgrepo-com.svg'
 import trashIcon from '../../assets/img/icons/trash-svgrepo-com.svg'
 const  WorkersListItem=(props)=>{
-    const {name,salary,onDelete,onToggleRise,onToggleIncrease,increase,rise}=props
+    const {name,salary,onDelete,onToggleRise,onToggleIncrease,onToggleProp,increase,rise}=props
 
-
-
+let classNames='list-group-item d-flex justify-content-between'
+if(increase){
+    classNames+=' increase'
+}
        return (
-         <li className={'list-group-item d-flex justify-content-between'}>
-             <span className={'list-group-item-label'} onClick={onToggleRise}>{name}</span>
+         <li className={classNames}>
+             <span
+               className={'list-group-item-label unselectable'}
+                   onClick={onToggleProp}
+               data-toggle={'rise'}
+
+             >{name}</span>
              <input type="text" className={'list-group-item-input'} defaultValue={`${salary}$`}/>
              <div className={'d-flex justify-content-center align-items-center'}>
-                 {rise? <img className={'btn-star'} src={likeIcon} alt="like"/>:''}
+                 {rise
+                   ?
+                   <div className={'btn-star'}><img className={'star-icon like'} src={likeIcon} alt="like"/></div>
+                   :<div className={'btn-star'}></div>}
                  <button
-                   onClick={onToggleIncrease}
+                   onClick={onToggleProp}
+                   data-toggle={'increase'}
                    type={"button"}
                    className={'btn-star'}>
                      {increase ?

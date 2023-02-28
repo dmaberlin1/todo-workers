@@ -66,6 +66,9 @@
 .star-icon{
     height: 40px;
     width: 40px;
+    margin: 0 auto !important;
+    margin-left: 5px !important;
+    padding: 0;
 
 }
 .btn-star{
@@ -73,7 +76,24 @@
     height: 40px  !important;
     width: 40px !important;
     margin: 0 auto !important;
+    margin-left: 5px !important;
     padding: 0;
     background-color: #fdfdfd;
 
+}
+.like{
+    height: 35px;
+    width: 35px;
+    padding: 4px;
+    margin: 2px auto !important;
+}
+
+.unselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
 }

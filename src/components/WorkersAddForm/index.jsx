@@ -27,8 +27,9 @@ class WorkersAddForm extends Component {
             [e.target.name]:e.target.value
         })
     }
-    formSubmitHandler = (e) => {
+    onSubmit = (e) => {
       e.preventDefault();
+      if(this.state.name.length<3||!this.state.salary) return;
       this.props.onAdd(this.state.name,this.state.salary);
       this.setState({
           name:'',
@@ -43,9 +44,9 @@ class WorkersAddForm extends Component {
         const{ name,salary}=this.state
 
         return (
-          <div>
+          <div className={'app-add-form'}>
               <h3>Добавить нового сотрудника</h3>
-              <form action="" onSubmit={this.formSubmitHandler} className={'add-form d-flex'}>
+              <form  onSubmit={this.onSubmit} className={'add-form d-flex'}>
                   <input
                     value={name}
                     onChange={this.inputHandler}
