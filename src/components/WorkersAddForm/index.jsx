@@ -2,30 +2,25 @@ import React, {Component} from 'react';
 import './WorkersAddForm.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import userIcon from '../../assets/img/icons/user-2-svgrepo-com.svg'
-import {render} from "react-dom";
-import {logDOM} from "@testing-library/react";
 class WorkersAddForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
             name: '',
             salary: '',
-            workerName: '',
-            workerSalary: 0
         }
     }
 
 
-
-    inputNameHandler = (e) => {
-        this.setState({
-            name: e.target.value
-        })
-    }
-
-    inputSalaryHandler = (e) => {
-        this.setState({salary: e.target.value})
-    }
+    // inputNameHandler = (e) => {
+    //     this.setState({
+    //         name: e.target.value
+    //     })
+    // }
+    //
+    // inputSalaryHandler = (e) => {
+    //     this.setState({salary: e.target.value})
+    // }
 
     inputHandler=(e)=>{
         this.setState({
@@ -33,14 +28,12 @@ class WorkersAddForm extends Component {
         })
     }
     formSubmitHandler = (e) => {
-      e.preventDefault()
-        return(
-          this.setState(state=>({
-              workerName:state.name,
-              workerSalary:state.salary
-          }))
-
-    )
+      e.preventDefault();
+      this.props.onAdd(this.state.name,this.state.salary);
+      this.setState({
+          name:'',
+          salary:''
+      })
 
     }
 

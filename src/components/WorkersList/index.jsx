@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 const WorkersList = (props) => {
-    const {data,onDelete} = props
+    const {data,onDelete,onToggleIncrease,onToggleRise} = props
+
 
     return (
       <ul className={'app-list list-group'}>
@@ -14,6 +15,9 @@ const WorkersList = (props) => {
                 key={worker.id}
                 {...worker}
                 onDelete={()=>onDelete(worker.id)}
+                onToggleIncrease={()=>onToggleIncrease(worker.id)}
+                onToggleRise={()=>onToggleRise(worker.id)}
+                increase={worker.increase}
               ></WorkersListItem>
           })}
       </ul>
